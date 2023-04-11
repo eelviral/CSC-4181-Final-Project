@@ -65,13 +65,16 @@ class Yylex implements ParserTokens {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\11\0\5\1\22\0\1\1\7\0\1\2\1\3\1\0"+
-    "\1\4\4\0\12\5\2\0\1\6\1\7\3\0\32\10"+
-    "\4\0\1\5\1\0\3\10\1\11\1\12\3\10\1\13"+
-    "\2\10\1\14\2\10\1\15\3\10\1\16\2\10\1\17"+
-    "\4\10\12\0\1\1\32\0\1\1\u01df\0\1\1\177\0"+
-    "\13\1\35\0\2\1\5\0\1\1\57\0\1\1\240\0"+
-    "\1\1\377\0\u0100\20";
+    "\11\0\1\1\1\2\2\3\1\2\22\0\1\1\1\4"+
+    "\6\0\1\5\1\6\1\7\1\10\1\11\1\12\1\0"+
+    "\1\13\1\14\11\15\1\0\1\16\1\17\1\20\1\21"+
+    "\2\0\32\22\1\23\1\0\1\24\1\0\1\25\1\0"+
+    "\3\22\1\26\1\27\1\30\1\22\1\31\1\32\2\22"+
+    "\1\33\1\22\1\34\1\35\1\36\1\22\1\37\1\40"+
+    "\1\41\1\42\1\43\1\44\3\22\1\45\1\0\1\46"+
+    "\7\0\1\3\32\0\1\1\u01df\0\1\1\177\0\13\1"+
+    "\35\0\2\3\5\0\1\1\57\0\1\1\240\0\1\1"+
+    "\377\0\u0100\47";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1536];
@@ -98,11 +101,15 @@ class Yylex implements ParserTokens {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\5\1\1\1\6"+
-    "\3\7\1\10\1\11\4\7\1\12\1\13";
+    "\1\0\1\1\1\2\1\1\1\3\1\4\1\5\1\6"+
+    "\1\7\1\10\1\11\2\12\1\13\1\14\1\15\1\16"+
+    "\1\17\1\20\1\21\6\17\1\22\1\23\1\24\1\25"+
+    "\2\0\1\14\1\26\1\27\1\17\1\30\5\17\1\0"+
+    "\1\2\2\17\1\31\4\17\1\2\1\32\3\17\1\33"+
+    "\1\17\1\34\1\35\1\17\1\36\1\37";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[19];
+    int [] result = new int[63];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -127,12 +134,17 @@ class Yylex implements ParserTokens {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\21\0\42\0\21\0\21\0\21\0\63\0\21"+
-    "\0\104\0\125\0\146\0\21\0\21\0\167\0\210\0\231"+
-    "\0\252\0\104\0\104";
+    "\0\0\0\50\0\120\0\170\0\50\0\50\0\50\0\50"+
+    "\0\50\0\50\0\240\0\50\0\310\0\50\0\360\0\u0118"+
+    "\0\u0140\0\u0168\0\50\0\50\0\u0190\0\u01b8\0\u01e0\0\u0208"+
+    "\0\u0230\0\u0258\0\50\0\50\0\50\0\50\0\u0280\0\u02a8"+
+    "\0\50\0\50\0\50\0\u02d0\0\u0168\0\u02f8\0\u0320\0\u0348"+
+    "\0\u0370\0\u0398\0\u03c0\0\u03e8\0\u0410\0\u0438\0\u0168\0\u0460"+
+    "\0\u0488\0\u04b0\0\u04d8\0\50\0\u0168\0\u0500\0\u0528\0\u0550"+
+    "\0\u0168\0\u0578\0\u0168\0\u0168\0\u05a0\0\u0168\0\u0168";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[19];
+    int [] result = new int[63];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -155,17 +167,42 @@ class Yylex implements ParserTokens {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\6\1\2\1\7\1\10"+
-    "\2\11\1\12\4\11\1\13\1\14\22\0\1\3\26\0"+
-    "\1\15\16\0\1\11\2\0\10\11\6\0\1\11\2\0"+
-    "\4\11\1\16\3\11\6\0\1\11\2\0\5\11\1\17"+
-    "\2\11\6\0\1\11\2\0\6\11\1\20\1\11\6\0"+
-    "\1\11\2\0\3\11\1\21\4\11\6\0\1\11\2\0"+
-    "\2\11\1\22\5\11\6\0\1\11\2\0\1\11\1\23"+
-    "\6\11\1\0";
+    "\1\2\3\3\1\4\1\5\1\6\1\7\1\10\1\11"+
+    "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
+    "\1\22\1\23\1\24\1\2\1\22\1\25\2\22\1\26"+
+    "\3\22\1\27\1\30\3\22\1\31\1\32\1\33\1\34"+
+    "\1\35\51\0\3\3\64\0\1\36\36\0\1\37\3\0"+
+    "\1\40\50\0\2\15\52\0\1\41\47\0\1\42\47\0"+
+    "\1\43\43\0\2\22\4\0\1\22\2\0\20\22\17\0"+
+    "\2\22\4\0\1\22\2\0\6\22\1\44\11\22\17\0"+
+    "\2\22\4\0\1\22\2\0\3\22\1\45\3\22\1\46"+
+    "\10\22\17\0\2\22\4\0\1\22\2\0\12\22\1\47"+
+    "\5\22\17\0\2\22\4\0\1\22\2\0\2\22\1\50"+
+    "\15\22\17\0\2\22\4\0\1\22\2\0\10\22\1\51"+
+    "\7\22\17\0\2\22\4\0\1\22\2\0\4\22\1\52"+
+    "\13\22\3\0\7\37\1\53\40\37\2\40\1\54\1\0"+
+    "\43\40\15\0\2\22\4\0\1\22\2\0\13\22\1\55"+
+    "\4\22\17\0\2\22\4\0\1\22\2\0\11\22\1\56"+
+    "\2\22\1\57\3\22\17\0\2\22\4\0\1\22\2\0"+
+    "\5\22\1\60\12\22\17\0\2\22\4\0\1\22\2\0"+
+    "\14\22\1\61\3\22\17\0\2\22\4\0\1\22\2\0"+
+    "\5\22\1\62\12\22\17\0\2\22\4\0\1\22\2\0"+
+    "\5\22\1\63\12\22\3\0\7\37\1\53\3\37\1\64"+
+    "\34\37\2\0\1\54\61\0\2\22\4\0\1\22\2\0"+
+    "\2\22\1\65\15\22\17\0\2\22\4\0\1\22\2\0"+
+    "\15\22\1\66\2\22\17\0\2\22\4\0\1\22\2\0"+
+    "\7\22\1\67\10\22\17\0\2\22\4\0\1\22\2\0"+
+    "\15\22\1\70\2\22\17\0\2\22\4\0\1\22\2\0"+
+    "\1\22\1\71\16\22\17\0\2\22\4\0\1\22\2\0"+
+    "\6\22\1\72\11\22\17\0\2\22\4\0\1\22\2\0"+
+    "\14\22\1\73\3\22\17\0\2\22\4\0\1\22\2\0"+
+    "\14\22\1\74\3\22\17\0\2\22\4\0\1\22\2\0"+
+    "\12\22\1\75\5\22\17\0\2\22\4\0\1\22\2\0"+
+    "\2\22\1\76\15\22\17\0\2\22\4\0\1\22\2\0"+
+    "\7\22\1\77\10\22\3\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[187];
+    int [] result = new int[1480];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -208,11 +245,12 @@ class Yylex implements ParserTokens {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\1\1\3\11\1\1\1\11\3\1\2\11"+
-    "\6\1";
+    "\1\0\1\11\2\1\6\11\1\1\1\11\1\1\1\11"+
+    "\4\1\2\11\6\1\4\11\2\0\3\11\7\1\1\0"+
+    "\10\1\1\11\13\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[19];
+    int [] result = new int[63];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -714,59 +752,161 @@ class Yylex implements ParserTokens {
             { return UNKNOWN;
             }
             // fall through
-          case 12: break;
+          case 32: break;
           case 2:
             { /* ignore */
             }
             // fall through
-          case 13: break;
+          case 33: break;
           case 3:
             { return LPAREN;
             }
             // fall through
-          case 14: break;
+          case 34: break;
           case 4:
             { return RPAREN;
             }
             // fall through
-          case 15: break;
+          case 35: break;
           case 5:
+            { yyparser.yylval = new ParserVal(MULOP); return MULOP;
+            }
+            // fall through
+          case 36: break;
+          case 6:
             { yyparser.yylval = new ParserVal(ADDOP); return ADDOP;
             }
             // fall through
-          case 16: break;
-          case 6:
+          case 37: break;
+          case 7:
+            { return COMMA;
+            }
+            // fall through
+          case 38: break;
+          case 8:
+            { yyparser.yylval = new ParserVal(SUBOP); return SUBOP;
+            }
+            // fall through
+          case 39: break;
+          case 9:
+            { yyparser.yylval = new ParserVal(DIVOP); return DIVOP;
+            }
+            // fall through
+          case 40: break;
+          case 10:
+            { int number = Integer.parseInt(yytext());
+					  yyparser.yylval = new ParserVal(number);
+					  return NUMBER;
+            }
+            // fall through
+          case 41: break;
+          case 11:
+            { return SEMI;
+            }
+            // fall through
+          case 42: break;
+          case 12:
+            { yyparser.yylval = new ParserVal(LTE); return LTE;
+            }
+            // fall through
+          case 43: break;
+          case 13:
             { return ASSIGN;
             }
             // fall through
-          case 17: break;
-          case 7:
+          case 44: break;
+          case 14:
+            { yyparser.yylval = new ParserVal(GT); return GT;
+            }
+            // fall through
+          case 45: break;
+          case 15:
             { String identifier = yytext();
 					  yyparser.yylval = new ParserVal(identifier);
 					  return IDENTIFIER;
             }
             // fall through
-          case 18: break;
-          case 8:
+          case 46: break;
+          case 16:
+            { return LBRACK;
+            }
+            // fall through
+          case 47: break;
+          case 17:
+            { return RBRACK;
+            }
+            // fall through
+          case 48: break;
+          case 18:
+            { return LBRACE;
+            }
+            // fall through
+          case 49: break;
+          case 19:
+            { return RBRACE;
+            }
+            // fall through
+          case 50: break;
+          case 20:
             { System.out.print(yytext());
             }
             // fall through
-          case 19: break;
-          case 9:
-            { yyparser.yylval = new ParserVal(LTE); return LTE;
+          case 51: break;
+          case 21:
+            { yyparser.yylval = new ParserVal(NOTEQ); return NOTEQ;
             }
             // fall through
-          case 20: break;
-          case 10:
+          case 52: break;
+          case 22:
+            { yyparser.yylval = new ParserVal(EQ); return EQ;
+            }
+            // fall through
+          case 53: break;
+          case 23:
+            { yyparser.yylval = new ParserVal(GTE); return GTE;
+            }
+            // fall through
+          case 54: break;
+          case 24:
+            { return IF;
+            }
+            // fall through
+          case 55: break;
+          case 25:
+            { yyparser.yylval = new ParserVal(INT); return INT;
+            }
+            // fall through
+          case 56: break;
+          case 26:
             { return ELSE;
             }
             // fall through
-          case 21: break;
-          case 11:
+          case 57: break;
+          case 27:
             { yyparser.yylval = new ParserVal(VOID); return VOID;
             }
             // fall through
-          case 22: break;
+          case 58: break;
+          case 28:
+            { return INPUT;
+            }
+            // fall through
+          case 59: break;
+          case 29:
+            { return PRINT;
+            }
+            // fall through
+          case 60: break;
+          case 30:
+            { return WHILE;
+            }
+            // fall through
+          case 61: break;
+          case 31:
+            { return RETURN;
+            }
+            // fall through
+          case 62: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

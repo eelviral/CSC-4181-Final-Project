@@ -48,6 +48,13 @@ program_start:
 		}
 	;
 	
+declaration_list: declaration_list declaration 
+	| declaration
+	;
+	
+declaration: var_declaration
+	| fun_declaration
+	;
 
 var_declaration: type_specifier IDENTIFIER SEMI
 		{
@@ -202,6 +209,32 @@ compound_stmt: compound_stmt_start LBRACE local_declarations statement_list RBRA
 		{
 			// SYMTAB exit scope
 		}
+	;
+	
+local_declarations:  local_declarations var_declaration
+	| /* empty */
+	;
+	
+statement_list:  statement_list statement
+	| /* empty */
+	;
+
+statement:  assign_stmt 
+	| compound_stmt
+	| selection_stmt
+	| iteration_stmt
+	| return_stmt
+	| print_stmt
+	| input_stmt
+	| call_stmt
+	| SEMI
+	;
+	
+call_stmt: call
+	;
+
+assign_stmt: IDENTIFIER ASSIGN expression SEMI
+	| IDENTIFIER LBRACE expression RBRACE ASSIGN expression SEMI
 	;
 
 compound_stmt_start:
@@ -364,7 +397,14 @@ expression:	additive_expression relop additive_expression
 		}
 		|	additive_expression
 	;
-
+	
+relop:  LTE 
+	| LT 
+	| GT 
+	| GTE 
+	| EQ 
+	| NOTEQ
+	;
 
 additive_expression: additive_expression addop term
 		{
@@ -440,14 +480,13 @@ call:		IDENTIFIER LPAREN args RPAREN
 		}
 	;
 
-///////////// JUST SO THE PARSER WILL BUILD, GET RID OF THESE!
-args: ;
-declaration_list: ;
-local_declarations: ;
-relop: ;
-statement: ;
-statement_list: ;
-//////////////////////////////////////////////////////////////
+args: arg_list 
+	| /* empty */
+	;
+	
+arg_list: arg_list COMMA expression
+	| expression
+	;
 
 %%
 
