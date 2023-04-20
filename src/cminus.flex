@@ -61,7 +61,7 @@ linecomment = "//".*[\n\r]+
 "else"				{ return ELSE; }
 "if"				{ return IF; }
 "int"				{ yyparser.yylval = new ParserVal(INT); return INT; }
-"return"			{ return ELSE; }
+"return"			{ return RETURN; }
 "while"				{ return WHILE; }
 "print"				{ return PRINT; }
 "input"				{ return INPUT; }
@@ -90,7 +90,7 @@ linecomment = "//".*[\n\r]+
 "{"					{ return LBRACE; }
 "}"					{ return RBRACE; }
 
-"number"			{ int number = Integer.parseInt(yytext());
+{integer}			{ int number = Integer.parseInt(yytext());
 					  yyparser.yylval = new ParserVal(number);
 					  return NUMBER; }  
 

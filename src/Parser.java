@@ -1,4 +1,4 @@
-// Output created by jacc on Wed Apr 19 02:45:57 EDT 2023
+// Output created by jacc on Thu Apr 20 14:23:57 EDT 2023
 
 
 import java.io.*;
@@ -3287,7 +3287,7 @@ class Parser implements ParserTokens {
                         else 
                         {
                                 // SEMANTIC else the function is declared after main, error
-                                semerror("Function " + name + "declared after main"); 
+                                semerror("Function " + name + " declared after main"); 
                         }
 
                         // Remember the function record for later use
@@ -3826,7 +3826,7 @@ class Parser implements ParserTokens {
                         // SEMANTIC else if type is void, semantic error, invalid type
                         else if (vartype == VOID) 
                         { 
-                                semerror("Variable " + name + "cannot be of type VOID!"); 
+                                semerror("Variable " + name + " cannot be of type VOID!"); 
                         }
                         
                         // SYMTAB got here, so ok, create variable record, insert in symbol table
@@ -3857,7 +3857,7 @@ class Parser implements ParserTokens {
                         // SEMANTIC else if type is void, semantic error, invalid type
                         else if (vartype == VOID) 
                         { 
-                                semerror("Array " + name + "cannot be of type VOID!"); 
+                                semerror("Array " + name + " cannot be of type VOID!"); 
                         }
                         
                         // SYMTAB got here, so ok, create variable record, insert in symbol table
@@ -3935,15 +3935,20 @@ private int yylex()
 /* syntax errors */
 public void yyerror (String error)
 {
-    System.err.println("Parse Error : " + error);
+    int lineno = lexer.getLine() + 1; 
+        int position = lexer.getCol() + 1; 
+    System.err.println("Parse Error : " + error + " at Line: " + lineno + " & at Column: " + position + "." + " Got: " + lexer.yytext());
 }
 
 /* semantic errors */
 public void semerror (String error)
 {
+        int lineno = lexer.getLine() + 1; 
+        int position = lexer.getCol() + 1; 
+        
         if (ParseMain.SYMBOL_TABLE_OUTPUT)
         {
-        System.err.println("Semantic Error : " + error);
+        System.err.println("Semantic Error : " + error + " at Line: " + lineno + " & at Column: " + position);
         }
 }
 
