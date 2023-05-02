@@ -117,11 +117,7 @@ public class GenCode implements ParserTokens
         }
         // requires analysis for exact count
         outputCode(".limit stack 32");
-        // can be kept track of
-
-      
-                                                 
-                          
+        // can be kept track of       
         outputCode(".limit locals 32");
                              
     }
